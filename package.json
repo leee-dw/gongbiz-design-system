@@ -33,7 +33,6 @@
     "@storybook/react": "^6.3.12",
     "@storybook/storybook-deployer": "^2.8.10",
     "@svgr/rollup": "^5.5.0",
-    "@types/classnames": "^2.3.1",
     "@types/node-sass": "^4.11.2",
     "@types/react": "^17.0.30",
     "babel-loader": "^8.2.2",
@@ -58,7 +57,6 @@
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "@types/classnames": "^2.3.1",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

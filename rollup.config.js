@@ -1,12 +1,12 @@
 import image from '@rollup/plugin-image'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
-import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+
 import postcss from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import pkg from './package.json'
-import external from 'rollup-plugin-peer-deps-external'
+
 import svgr from '@svgr/rollup'
 import url from 'rollup-plugin-url'
 
@@ -23,7 +23,6 @@ export default {
   ],
 
   plugins: [
-    peerDepsExternal(),
     image(),
     resolve({ extensions }),
     commonjs({
