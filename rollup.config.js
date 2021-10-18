@@ -9,31 +9,33 @@ import pkg from './package.json'
 
 import svgr from '@svgr/rollup'
 import url from 'rollup-plugin-url'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'] // 어떤 확장자를 처리 할 지 정함
+const extensions = ['.js', '.jsx', '.ts', '.tsx']
 process.env.BABEL_ENV = 'production'
 
 export default {
   input: './src/index.ts',
   output: [
     {
-      file: pkg.module, // 번들링한 파일을 저장 할 경로
-      format: 'es', // ES Module 형태로 번들링함
+      file: pkg.module,
+      format: 'es',
     },
   ],
 
   plugins: [
+    peerDepsExternal(),
     image(),
     resolve({ extensions }),
     commonjs({
       include: 'node_modules/**',
     }),
-    babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
-    url(), // 미디어 파일을 dataURI 형태로 불러와서 사용 할 수 있게 해줌.
-    svgr(), // SVG를 컴포넌트로 사용 할 수 있게 해줌.
+    babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }),
+    url(),
+    svgr(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      extract: false,
+      extract: true,
       modules: true,
       use: ['sass'],
     }),
