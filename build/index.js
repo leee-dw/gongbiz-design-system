@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./components/Button/index.js");exports.Button=e.default;
+export { default as Button } from './components/Button/index.js';
 //# sourceMappingURL=index.js.map

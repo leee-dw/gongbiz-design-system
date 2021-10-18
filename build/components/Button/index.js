@@ -1,2 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("react"),t=require("classnames"),r=require("./index.module.scss.js");function u(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}function n(e){if(e&&e.__esModule)return e;var t=Object.create(null);return e&&Object.keys(e).forEach((function(r){if("default"!==r){var u=Object.getOwnPropertyDescriptor(e,r);Object.defineProperty(t,r,u.get?u:{enumerable:!0,get:function(){return e[r]}})}})),t.default=e,Object.freeze(t)}var o,a=n(e),c=u(t);exports.ButtonType=void 0,(o=exports.ButtonType||(exports.ButtonType={})).DEFAULT="default",o.PRIMARY="primary",o.SECONDARY="secondary";exports.default=function(e){var t=e.children,u=e.theme,n=void 0===u?exports.ButtonType.DEFAULT:u,o=c.default(r.default,r[n]);return a.createElement("button",{className:o},t)};
+import * as React from 'react';
+import classNames from 'classnames';
+import styles from './index.module.scss.js';
+
+var ButtonType;
+(function (ButtonType) {
+    ButtonType["DEFAULT"] = "default";
+    ButtonType["PRIMARY"] = "primary";
+    ButtonType["SECONDARY"] = "secondary";
+})(ButtonType || (ButtonType = {}));
+var Button = function (_a) {
+    var children = _a.children, _b = _a.theme, theme = _b === void 0 ? ButtonType.DEFAULT : _b;
+    var classNameProps = classNames(styles.default, styles[theme]);
+    return React.createElement("button", { className: classNameProps }, children);
+};
+
+export { ButtonType, Button as default };
 //# sourceMappingURL=index.js.map

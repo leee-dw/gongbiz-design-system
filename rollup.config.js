@@ -4,12 +4,8 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
-import { terser } from 'rollup-plugin-terser'
 
-const inputSrc = [
-  ['./index.ts', 'es'],
-  ['./index.ts', 'cjs'],
-]
+const inputSrc = [['./index.ts', 'es']]
 
 export default inputSrc.map(([input, format]) => {
   return {
@@ -34,7 +30,7 @@ export default inputSrc.map(([input, format]) => {
       postcss({
         plugins: [],
       }),
-      terser(),
+
       {
         name: 'Custom Rollup Plugin`',
 
