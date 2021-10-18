@@ -1,6 +1,6 @@
 import * as React from 'react';
-import classNames from '../../node_modules/classnames/index.js';
-import styles from './style.module.scss.js';
+import classNames from 'classnames';
+import styles from './index.module.scss.js';
 
 var ButtonType;
 (function (ButtonType) {
