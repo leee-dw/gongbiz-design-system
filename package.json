@@ -1,6 +1,6 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.16",
+  "version": "1.0.19",
   "module": "dist/index.js",
   "author": "THOM",
   "license": "MIT",
@@ -59,8 +59,6 @@
   "peerDependencies": {
     "classnames": "^2.3.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-spring": "^9.3.0",
-    "style-inject": "^0.3.0"
+    "react-dom": "^17.0.2"
   }
 }
