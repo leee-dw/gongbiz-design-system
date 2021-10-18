@@ -1,6 +1,6 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "module": "dist/index.js",
   "author": "THOM",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-knobs": "^6.3.1",
     "@storybook/react": "^6.3.12",
     "@storybook/storybook-deployer": "^2.8.10",
     "@svgr/rollup": "^5.5.0",
