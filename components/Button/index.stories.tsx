@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react'
 
-import Button, { ButtonType } from "./index";
+import Button, { ButtonType } from './index'
 
 export default {
-  title: "버튼",
+  title: 'Button',
   component: Button,
   parameters: {
-    componentSubtitle: "Button 컴포넌트",
+    componentSubtitle: 'Gongbiz Button Components',
   },
-};
+}
 
 export const defaultButton = () => {
-  return <Button>default 버튼</Button>;
-};
+  return <Button>Default 버튼</Button>
+}
 
 export const primaryButton = () => {
-  return <Button theme={ButtonType.PRIMARY}>primary 버튼</Button>;
-};
+  return <Button theme={ButtonType.PRIMARY}>PRIMARY 버튼</Button>
+}
 export const secondaryButton = () => {
-  return <Button theme={ButtonType.SECONDARY}>secondary 버튼</Button>;
-};
+  return <Button theme={ButtonType.SECONDARY}>SECONDARY 버튼</Button>
+}

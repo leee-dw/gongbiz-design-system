@@ -1,0 +1,40 @@
+.default {
+  padding: 12px 24px;
+  background-color: #495057;
+  color: white;
+  border: #323540;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 2000 ease;
+  &:hover {
+    background-color: #343a40;
+  }
+  &:active {
+    background-color: #212529;
+  }
+}
+
+.primary {
+  background-color: #f03e3e;
+  border: #f03e3e;
+  color: white;
+  transition: all 2000 ease;
+  &:hover {
+    background-color: #e03131;
+  }
+  &:active {
+    background-color: #c92a2a;
+  }
+}
+
+.secondary {
+  background-color: #d6336c;
+  border: #d6336c;
+  color: white;
+  &:hover {
+    background-color: #c2255c;
+  }
+  &:active {
+    background-color: #a61e4d;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./build/index.js",
   "scripts": {
@@ -8,29 +8,42 @@
     "storybook": "start-storybook -p 9009 -s public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leee-dw/gongbiz-design-system.git"
+  },
   "author": "THOM",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leee-dw/gongbiz-design-system/issues"
+  },
+  "homepage": "https://github.com/leee-dw/gongbiz-design-system#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.0.5",
+    "@storybook/addon-essentials": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@types/classnames": "^2.3.1",
+    "@types/node-sass": "^4.11.2",
     "@types/react": "^17.0.30",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
     "classnames": "^2.3.1",
     "node-sass": "^6.0.1",
+    "postcss": "^8.3.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.58.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sass-loader": "^12.2.0",
+    "sass-loader": "10",
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

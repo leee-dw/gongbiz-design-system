@@ -7,13 +7,14 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "esModuleInterop": true,
+
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "react",
-    "typeRoots": ["./typings"]
+    "typeRoots": ["./node_modules/@types", "types"]
   },
-  "include": ["typings"]
+  "include": ["types"]
 }
