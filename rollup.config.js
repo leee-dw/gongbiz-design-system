@@ -29,5 +29,21 @@ export default {
       modules: true,
       use: ['sass'],
     }),
+    {
+      name: 'Custom Rollup Plugin`',
+
+      generateBundle: (options, bundle) => {
+        Object.entries(bundle).forEach(entry => {
+          if (!entry[0].match(/.*(.scss.js)$/)) {
+            return
+          }
+
+          bundle[entry[0]].code = entry[1].code.replace(
+            '../../node_modules/style-inject/dist/style-inject.es.js',
+            'style-inject',
+          )
+        })
+      },
+    },
   ],
 }
