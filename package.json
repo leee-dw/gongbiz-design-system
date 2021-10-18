@@ -1,6 +1,6 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "",
   "main": "./build/index.js",
   "scripts": {
@@ -50,8 +50,8 @@
   "peerDependencies": {
     "@types/classnames": "^2.3.1",
     "classnames": "^2.3.1",
-    "style-inject": "^0.3.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "style-inject": "^0.3.0"
   }
 }
