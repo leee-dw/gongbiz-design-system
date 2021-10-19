@@ -1,6 +1,6 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "module": "dist/index.js",
   "author": "THOM",
   "license": "MIT",
