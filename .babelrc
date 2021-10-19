@@ -1,3 +1,6 @@
 {
-  "presets": [["react-app", { "flow": false, "typescript": true }]]
+  "presets": [
+    "@emotion/babel-preset-css-prop",
+    ["react-app", { "flow": false, "typescript": true }]
+  ]
 }

@@ -1,28 +1,46 @@
-import React from 'react'
+/** @jsxRuntime classic */
+/** @jsx jsx */
 
-import Button, { ButtonColors } from './index'
+import React from 'react'
+import { jsx, css } from '@emotion/core'
+
+import Button from './index'
 
 export default {
-  title: 'components/Button',
+  title: 'Design System/components/Button',
   component: Button,
   parameters: {
     componentSubtitle: 'Gongbiz Button Components',
   },
 }
 
-export const button = () => {
-  return <Button>BUTTON</Button>
-}
+export const Default = () => <Button>BUTTON</Button>
 
-button.story = {
-  name: 'Default',
-}
+const buttonWrapper = css`
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  & > div + div {
+    margin-left: 2rem;
+  }
+`
 
-export const Colors = () => {
+export const Sizes = () => {
   return (
-    <div style={{ padding: '2rem' }}>
-      <Button color={ButtonColors.YELLOW}>Button</Button>
-      <Button color={ButtonColors.GRAY}>Button</Button>
+    <div css={buttonWrapper}>
+      <div>
+        <Button size="small">BUTTON</Button>
+      </div>
+      <div>
+        <Button size="medium">BUTTON</Button>
+      </div>
+      <div>
+        <Button size="large">BUTTON</Button>
+      </div>
     </div>
   )
+}
+
+export const disabled = () => {
+  return <Button disabled>DISABLED</Button>
 }

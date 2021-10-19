@@ -4,7 +4,7 @@
   "tabWidth": 2,
   "semi": false,
   "singleQuote": true,
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "trailingComma": "all",
   "arrowParens": "avoid",
   "htmlWhitespaceSensitivity": "css"
