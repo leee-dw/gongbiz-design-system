@@ -5,25 +5,20 @@ import { jsx, css } from '@emotion/core'
 import * as React from 'react'
 import { palette } from '../../libs/palette'
 
-export interface ButtonProps {
+export interface IButtonProps {
   children: React.ReactNode
   onClick?: React.MouseEventHandler
-  size: 'small' | 'medium' | 'large'
-  color: 'gray' | 'red' | 'pink'
+  size?: 'small' | 'medium' | 'large'
+  color?: 'gray' | 'red' | 'pink'
   disabled?: boolean
 }
 
-const Button = ({ children, onClick, color, size, disabled }: ButtonProps) => {
+const Button = ({ children, onClick, color = 'gray', size = 'medium', disabled }: IButtonProps) => {
   return (
     <button disabled={disabled} css={[style, colors[color], sizes[size]]} onClick={onClick}>
       {children}
     </button>
   )
-}
-
-Button.defaultProps = {
-  color: 'gray',
-  size: 'medium',
 }
 
 const style = css`
