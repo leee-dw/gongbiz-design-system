@@ -1,25 +1,25 @@
 const path = require('path')
+const resolvePath = _path => path.join(process.cwd(), _path)
 
 module.exports = {
   stories: ['../**/*.stories.tsx'],
   addons: ['@storybook/addon-essentials', '@storybook/addon-knobs'],
 
   webpackFinal: async config => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader?modules', 'sass-loader'],
-      include: path.resolve(__dirname, '../'),
-    })
+    const emotionReactEleven = path.dirname(require.resolve('@emotion/react/package.json'))
+    const emotionStyledEleven = path.dirname(require.resolve('@emotion/styled/package.json'))
 
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      loader: require.resolve('babel-loader'),
-      options: {
-        presets: [['react-app', { flow: false, typescript: true }]],
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          '@emotion/core': emotionReactEleven,
+          '@emotion/styled': emotionStyledEleven,
+          'emotion-theming': emotionReactEleven,
+        },
       },
-    })
-    config.resolve.extensions.push('.ts', '.tsx')
-
-    return config
+    }
   },
 }

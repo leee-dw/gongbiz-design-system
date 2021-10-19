@@ -1,22 +1,28 @@
 import React from 'react'
 
-import Button, { ButtonTheme, ButtonVariant } from './index'
+import Button, { ButtonColors } from './index'
 
 export default {
-  title: 'Button',
+  title: 'components/Button',
   component: Button,
   parameters: {
     componentSubtitle: 'Gongbiz Button Components',
   },
 }
 
-export const variants = () => {
+export const button = () => {
+  return <Button>BUTTON</Button>
+}
+
+button.story = {
+  name: 'Default',
+}
+
+export const Colors = () => {
   return (
     <div style={{ padding: '2rem' }}>
-      <Button>Button</Button>
-      <Button variants={ButtonVariant.OUTLINE}>Button</Button>
-      <Button variants={ButtonVariant.GHOST}>Button</Button>
-      <Button variants={ButtonVariant.LINK}>Button</Button>
+      <Button color={ButtonColors.YELLOW}>Button</Button>
+      <Button color={ButtonColors.GRAY}>Button</Button>
     </div>
   )
 }
