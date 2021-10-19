@@ -2,5 +2,6 @@
   "presets": [
     "@emotion/babel-preset-css-prop",
     ["react-app", { "flow": false, "typescript": true }]
-  ]
+  ],
+  "plugins": ["inline-react-svg"]
 }
