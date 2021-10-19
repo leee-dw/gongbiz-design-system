@@ -8,7 +8,7 @@ import { action } from '@storybook/addon-actions'
 
 import Button from './Button'
 import ButtonGroup from '../ButtonGroup/ButtonGroup'
-import Icon from '../../Icons/Icon'
+import Icon from '../Icons/Icon'
 
 export default {
   title: 'Design System/components/Button',
