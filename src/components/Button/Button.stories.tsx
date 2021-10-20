@@ -1,11 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-
-import React from 'react'
 import { jsx, css } from '@emotion/core'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
-
+import { ComponentStory } from '@storybook/react'
 import Button from './Button'
 import ButtonGroup from '../ButtonGroup/ButtonGroup'
 import Icon from '../Icons/Icon'
@@ -13,33 +9,39 @@ import Icon from '../Icons/Icon'
 export default {
   title: 'Components/Button',
   component: Button,
-  decorators: [withKnobs],
   parameters: {
     componentSubtitle: 'Gongbiz Button Components',
+    backgrounds: {
+      values: [
+        { name: 'red', value: '#f00' },
+        { name: 'green', value: '#0f0' },
+        { name: 'blue', value: '#00f' },
+      ],
+    },
   },
 }
 
-export const button = () => {
-  const label = text('children', 'BUTTON')
-  const size = select('size', ['small', 'medium', 'large'], 'medium')
-  const theme = select('theme', ['primary', 'secondary'], 'primary')
-  const disabled = boolean('disabled', false)
-
-  return (
-    <Button size={size} theme={theme} disabled={disabled} onClick={action('onClick')}>
-      {label}
-    </Button>
-  )
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />
+const defaultArgs: {} = {
+  theme: 'primary',
+  disabled: false,
+  size: 'medium',
+  radiusType: 'default',
+  radiusSize: 'sm',
+  children: 'Default Button',
 }
 
-button.story = {
-  name: 'Default',
+export const Default = Template.bind({})
+
+Default.args = {
+  ...defaultArgs,
 }
 
 export const PrimaryButton = () => <Button>BUTTON</Button>
+
 export const SecondaryButton = () => <Button theme="secondary">BUTTON</Button>
 
-export const Disabled = () => {
+export const DisabledButton = () => {
   return <Button disabled>DISABLED</Button>
 }
 

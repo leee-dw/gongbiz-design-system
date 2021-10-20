@@ -1,11 +1,14 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx, css } from '@emotion/core'
 import * as React from 'react'
+import { jsx, css } from '@emotion/core'
+
+import { radiusStyle } from '../../common/styles/radiusStyle'
+import { RadiusProps } from '../../common/types/types'
 import { palette } from '../../libs/palette'
 
-export interface IButtonProps {
+export interface IButtonProps extends RadiusProps {
   /** 버튼 안의 내용 */
   children: React.ReactNode
   /** 클릭했을 때 호출할 함수 */
@@ -25,17 +28,27 @@ const Button = ({
   onClick,
   theme = 'primary',
   size = 'medium',
+  radiusType = 'default',
+  radiusSize = 'sm',
   disabled,
 }: IButtonProps) => {
   return (
-    <button disabled={disabled} css={[style, themes[theme], sizes[size]]} onClick={onClick}>
+    <button
+      disabled={disabled}
+      css={[
+        style,
+        themes[theme],
+        sizes[size],
+        radiusStyle[radiusType][radiusSize],
+      ]}
+      onClick={onClick}
+    >
       {children}
     </button>
   )
 }
 
 const style = css`
-  border-radius: 0.25rem;
   display: inline-flex;
   appearance: none;
   -webkit-box-align: center;
@@ -58,6 +71,8 @@ const style = css`
   display: inline-flex;
   font-weight: 500;
   cursor: pointer;
+  border-radius: 0.25rem;
+  letter-spacing: 0.5px;
 
   svg {
     width: 1em;

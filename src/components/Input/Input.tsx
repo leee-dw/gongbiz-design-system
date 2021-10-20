@@ -4,16 +4,22 @@
 import { jsx, css } from '@emotion/core'
 import * as React from 'react'
 import Icon from '../Icons/Icon'
-import { palette } from '../../libs/palette'
 
 export interface InputProps {
-  value?: string | number
+  value?: string
+  placeholder?: string
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Input = ({ value }: InputProps) => {
+const Input = ({ value, onChange, placeholder = '고객 검색' }: InputProps) => {
   return (
     <div css={style}>
-      <input value={value} placeholder="고객 검색" />
+      <input
+        type="text"
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
       <button>
         <Icon icon="SearchIcon" />
       </button>

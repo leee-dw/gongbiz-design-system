@@ -10,8 +10,12 @@ module.exports = {
   },
 
   webpackFinal: async config => {
-    const emotionReactEleven = path.dirname(require.resolve('@emotion/react/package.json'))
-    const emotionStyledEleven = path.dirname(require.resolve('@emotion/styled/package.json'))
+    const emotionReactEleven = path.dirname(
+      require.resolve('@emotion/react/package.json'),
+    )
+    const emotionStyledEleven = path.dirname(
+      require.resolve('@emotion/styled/package.json'),
+    )
     config.module.rules.unshift({
       test: /\.svg$/,
       use: ['@svgr/webpack'],

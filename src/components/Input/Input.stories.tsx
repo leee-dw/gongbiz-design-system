@@ -1,10 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { jsx, css } from '@emotion/core'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
 
 import Input from './Input'
 
@@ -18,5 +17,22 @@ export default {
 }
 
 export const input = () => {
-  return <Input />
+  const placeholder = text('placeholder', '고객 검색')
+  const [inputValue, setInputValue] = useState('')
+
+  const onChangeInput = e => {
+    return setInputValue(e.target.value)
+  }
+
+  return (
+    <Input
+      placeholder={placeholder}
+      value={inputValue}
+      onChange={onChangeInput}
+    />
+  )
+}
+
+input.story = {
+  name: 'Default',
 }

@@ -7,6 +7,16 @@ import Icon, { iconTypes } from './Icon'
 export default {
   component: Icon,
   title: 'Components/Icon',
+  parameters: {
+    componentSubtitle: 'Gongbiz Icon Components',
+    backgrounds: {
+      values: [
+        { name: 'red', value: '#f00' },
+        { name: 'green', value: '#0f0' },
+        { name: 'blue', value: '#00f' },
+      ],
+    },
+  },
 }
 
 export const IconList = () => {

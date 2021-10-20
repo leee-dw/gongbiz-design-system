@@ -15,7 +15,7 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx']
 process.env.BABEL_ENV = 'production'
 
 export default {
-  input: './src/index.ts',
+  input: pkg.source,
   output: [
     {
       file: pkg.module,
