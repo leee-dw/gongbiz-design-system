@@ -1,10 +1,11 @@
 {
   "name": "gongbiz-design-system",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "module": "dist/index.js",
   "author": "THOM",
   "license": "MIT",
   "types": "dist/types/index.d.ts",
+  "source": "./src/index.ts",
   "files": [
     "/dist"
   ],
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/leee-dw/gongbiz-design-system#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/react": "^11.5.0",
     "@rollup/plugin-commonjs": "^21.0.0",
