@@ -11,7 +11,7 @@ import ButtonGroup from '../ButtonGroup/ButtonGroup'
 import Icon from '../Icons/Icon'
 
 export default {
-  title: 'Design System/components/Button',
+  title: 'Components/Button',
   component: Button,
   decorators: [withKnobs],
   parameters: {

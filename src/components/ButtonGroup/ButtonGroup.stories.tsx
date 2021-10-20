@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 import { withKnobs, text, radios, boolean } from '@storybook/addon-knobs'
 
 export default {
-  title: 'Design System/components/Button Group',
+  title: 'Components/Button Group',
   component: ButtonGroup,
   decorators: [withKnobs],
 }
@@ -29,7 +29,7 @@ buttonGroup.story = {
 export const rightAlign = () => {
   return (
     <ButtonGroup rightAlign>
-      <Button>취소</Button>
+      <Button theme="secondary">취소</Button>
       <Button>확인</Button>
     </ButtonGroup>
   )

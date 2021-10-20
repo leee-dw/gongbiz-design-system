@@ -6,7 +6,7 @@ import Icon, { iconTypes } from './Icon'
 
 export default {
   component: Icon,
-  title: 'Design System/Icon',
+  title: 'Components/Icon',
 }
 
 export const IconList = () => {
